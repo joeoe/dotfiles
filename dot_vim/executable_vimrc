@@ -1,0 +1,57 @@
+set nocompatible
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-dispatch'
+Plug 'justinmk/vim-sneak'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'lilydjwg/colorizer'
+Plug 'alok/notational-fzf-vim'
+Plug 'godlygeek/tabular'
+Plug 'qpkorr/vim-bufkill'
+
+Plug 'vimwiki/vimwiki'
+
+"Plug 'xolox/vim-notes'
+"Plug 'xolox/vim-misc'
+
+Plug 'dhruvasagar/vim-open-url'
+
+" Coding
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'jiangmiao/auto-pairs'
+Plug 'alvan/vim-closetag'
+Plug 'sheerun/vim-polyglot'
+if has ('nvim')
+  Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+" colors
+Plug 'rakr/vim-one'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'dracula/vim', {'as':'dracula'}
+Plug 'altercation/vim-colors-solarized'
+Plug 'nlknguyen/papercolor-theme'
+Plug 'kaicataldo/material.vim'
+Plug 'logico/typewriter'
+Plug 'rhysd/vim-color-spring-night'
+call plug#end()
+filetype on
+syntax enable
+
+" vim:fdm=marker
