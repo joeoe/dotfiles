@@ -1,0 +1,106 @@
+[user]
+    name = Johannes Juks
+    email = johannesjuks@gmail.com
+    username = joeoe
+
+[core]
+    editor = vim
+	excludesfile = ~/.config/git/ignore
+
+[push]
+    default = simple
+
+[merge]
+    tool = vimdiff
+
+[mergetool]
+    prompt = true
+
+[difftool]
+    prompt = false
+
+[diff]
+    tool = vimdiff
+
+[alias]
+    a  = add
+    ai = add --interactive
+    ap = add --patch
+
+    ap = apply
+    as = apply --stat
+    ac = apply --check
+
+    b  = branch
+    ba = branch -a
+    bd = branch -d
+
+    c  = commit
+    ca = commit --amend
+    cm = commit --message
+    cam = commit --amend --message
+
+    cl = clone
+
+    co = checkout
+    com = checkout master
+    cb = checkout -b
+
+    cp = cherry-pick
+    cpa = cherry-pick --abort
+    cpc = cherry-pick --continue
+
+    d  = diff
+    dw = diff --word-diff
+
+    lsf = !git ls-files | grep -i 
+
+    m  = merge
+    ma = merge --abort
+    mc = merge --continue
+    ms = merge --skip
+
+    ps = push
+    psu = push --set-upstream
+
+    pl = pull
+    pb = pull --rebase
+
+    rb = rebase
+    rba = rebase --abort
+    rbc = rebase --continue
+    rbi = rebase --interactive
+    rbs = rebase --skip
+
+    r  = reset
+    r1 = reset HEAD^
+    r2 = reset HEAD^^
+    rh = reset --hard
+    rh1 = reset HEAD^ --hard
+    rh2 = reset HEAD^^ --hard
+
+    rmf = rm -f
+    rmrf = rm -rf
+
+    s  = status
+    ss = status -s
+
+    sa = stash apply
+    sc = stash clear
+    sd = stash drop
+    sl = stash list
+    sp = stash pop
+    sv = stash save
+
+    ls = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate
+    l  = ls
+    lp = ls -p
+    l1 = l -p -1
+    l2 = l -p -2
+    l3 = l -p -3
+    ln = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    lu = log -u
+
+    alias = "!git config -l | grep alias | cut -c 7-"
+
+

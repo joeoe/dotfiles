@@ -1,0 +1,188 @@
+# You can edit this file by hand, but it's recommended not to do that.
+
+# Marks:
+'d
+	/home/joeoe/dotfiles/
+	..
+1585478171
+'h
+	/home/joeoe/
+	..
+1585478171
+
+# Bookmarks:
+
+# TUI:
+al
+q1
+v2
+ov
+m-1
+l2
+r2
+
+# Left window history (oldest to newest):
+d/home/joeoe/dotfiles
+	config
+1
+d/home/joeoe/dotfiles/config
+	vim
+14
+d/home/joeoe/dotfiles/config/vim
+	autoload
+1
+d/home/joeoe/dotfiles/config/vim/autoload
+	mappings.vim
+1
+d/home/joeoe/dotfiles/config/vim
+	ftdetect
+2
+d/home/joeoe/dotfiles/config
+	vim
+14
+d/home/joeoe/dotfiles
+	config
+1
+d/home/joeoe/dotfiles/config
+	vim.basic
+15
+d/home/joeoe/dotfiles/config/vim.basic
+	autoload
+2
+d/home/joeoe/dotfiles/config/vim.basic/autoload
+	..
+0
+d/home/joeoe/dotfiles/config/vim.basic
+	plugged
+3
+d/home/joeoe/dotfiles/config/vim.basic/plugged
+	deoplete.nvim
+2
+d/home/joeoe/dotfiles/config/vim.basic/plugged/deoplete.nvim
+	rplugin
+4
+d/home/joeoe/dotfiles/config/vim.basic/plugged/deoplete.nvim/rplugin
+	python3
+1
+d/home/joeoe/dotfiles/config/vim.basic/plugged/deoplete.nvim/rplugin/python3
+	deoplete
+1
+d/home/joeoe/dotfiles/config/vim.basic/plugged/deoplete.nvim/rplugin/python3/deoplete
+	source
+4
+d/home/joeoe/dotfiles/config/vim.basic/plugged/deoplete.nvim/rplugin/python3/deoplete/source
+	..
+0
+d/home/joeoe/dotfiles/config/vim.basic/plugged/deoplete.nvim/rplugin/python3/deoplete
+	source
+4
+d/home/joeoe/dotfiles/config/vim.basic/plugged/deoplete.nvim/rplugin/python3
+	deoplete
+1
+d/home/joeoe/dotfiles/config/vim.basic/plugged/deoplete.nvim/rplugin
+	python3
+1
+d/home/joeoe/dotfiles/config/vim.basic/plugged/deoplete.nvim
+	rplugin
+4
+d/home/joeoe/dotfiles/config/vim.basic/plugged
+	deoplete.nvim
+2
+d/home/joeoe/notes
+	20200329T1548-editors.md
+2
+d/home/joeoe/git
+	..
+0
+d/home/joeoe
+	notes
+14
+d/home/joeoe/notes
+	20200329T1548-editors.md
+2
+d/
+	var
+17
+d/var
+	..
+0
+d/
+	var
+17
+d/var
+	cache
+1
+d/proc
+	version_signature
+27
+d/home/joeoe/dotfiles/config
+	vim.basic
+15
+
+# Right window history (oldest to newest):
+D/home/joeoe
+	notes
+3
+D/home/joeoe/notes
+	n-dev-editors.md
+2
+D/home/joeoe/git
+	..
+0
+D/home/joeoe
+	notes
+4
+D/home/joeoe/notes
+	..
+0
+D/home/joeoe
+	notes
+4
+D/home/joeoe/notes
+	20200329T1638-irc.md
+1
+D/home/joeoe
+	
+0
+D/home/joeoe/dotfiles/config
+	
+0
+
+# Command line history (oldest to newest):
+:colorscheme default-backup
+:colorscheme g80
+:colorscheme iceberg
+:colorscheme lucius
+:colorscheme ph
+:colorscheme dracula
+
+# Prompt history (oldest to newest):
+
+# Local filter history (oldest to newest):
+|edit
+|jap
+|irc
+
+# Registers:
+""/home/joeoe/.local/share/vifm/Trash/000_n-irc.md
+
+# Directory stack (oldest to newest):
+
+# Trash content:
+t/home/joeoe/.local/share/vifm/Trash/000_n-japanese.md
+	/home/joeoe/notes/n-japanese.md
+t/home/joeoe/.local/share/vifm/Trash/000_index.backup.md
+	/home/joeoe/notes/index.backup.md
+t/home/joeoe/.local/share/vifm/Trash/000_n-irc.md
+	/home/joeoe/notes/n-irc.md
+
+# State:
+f/^.*\.(lo|o|d|class)$|.*~$|^tags$/
+i1
+[.0
+[F
+F/^.*\.(lo|o|d|class)$|.*~$|^tags$/
+I1
+].1
+]F
+s0

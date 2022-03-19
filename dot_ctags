@@ -1,0 +1,5 @@
+--langdef=racket
+--langmap=racket:.rkt
+--regex-racket=/^\(def[a-zA-Z0-9\-_\?\/\\]+[ \t]+([a-zA-Z0-9\-_\/\\\?]+)/\1/d,definition/
+--regex-racket=/^\(define\-syntax(\-rule)?[ \t]+([a-zA-Z0-9\-_\/\\\?]+)/\2/m,macro/
+--regex-racket=/^\(define?[ \t]+(([a-zA-Z0-9\-_\/\\\?]+)[ \t]+\(lambda|\(([a-zA-Z0-9\-_\/\\\?]+))/\2\3/f,function/
