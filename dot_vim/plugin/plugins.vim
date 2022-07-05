@@ -73,39 +73,6 @@ let g:closetag_filetypes = 'html,xhtml,phtml,jsx,javascript.jsx'
 " Colorizer
 let g:colorizer_startup = 0
 
-" Deoplete
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#source('_',
-            \ 'matchers', ['matcher_full_fuzzy'])
-
-" Ultisnips
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-
-" Vimwiki
-let notes = {}
-let notes.path = '~/notes'
-let notes.syntax = 'markdown'
-let notes.ext = '.md'
-let notes.nested_syntaxes = {'python': 'python', 'c++': 'cpp', 'sh': 'sh'}
-
-let g:vimwiki_list = [notes]
-let g:vimwiki_global_ext = 0
-let g:vimwiki_table_mappings = 0
-let g:vimwiki_hl_headers = 1
-" hi VimwikiHeader1 ctermfg=225
-" hi VimwikiHeader2 ctermfg=226
-" hi VimwikiHeader3 ctermfg=227
-" hi VimwikiHeader4 ctermfg=228
-" hi VimwikiHeader5 ctermfg=229
-" hi VimwikiHeader6 ctermfg=230
-
-let g:notes_directories = ['~/notesbk']
-
-" NV
-let g:nv_search_paths = ['~/notes']
-
 "}}}
 
 " vim:fdm=marker:foldlevel=0
