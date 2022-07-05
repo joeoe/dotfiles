@@ -12,6 +12,7 @@ HISTFILESIZE=2000
 SYSTEM_PATH=$PATH
 unset PATH
 PATH=$HOME/.local/bin
+PATH=$PATH:$HOME/bin
 PATH=$PATH:$HOME/scripts
 PATH=$PATH:$HOME/.npm/bin
 PATH=$PATH:$HOME/.zsh/bin
@@ -48,7 +49,7 @@ shopt -s globstar
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-source ~/.bash-powerline.sh
+source ~/.bash_powerline
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
