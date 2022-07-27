@@ -56,6 +56,8 @@
     d  = diff
     dw = diff --word-diff
 
+    f = fetch
+
     lsf = !git ls-files | grep -i 
 
     m  = merge
