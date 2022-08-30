@@ -115,11 +115,6 @@ function zet() {
     nvim "+Zet $*"
 }
 
-[[ -f /etc/bash_completion ]] && ! shopt -oq posix && . /etc/bash_completion
-# if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-#     . /etc/bash_completion
-# fi
-
 # WSL-OPEN
 if [[ $(uname -r) == *Microsoft ]]; then
     if [[ -z $BROWSER  ]]; then
@@ -129,14 +124,12 @@ if [[ $(uname -r) == *Microsoft ]]; then
     fi
 fi
 
+# bash completion
+[[ -f /etc/bash_completion ]] && ! shopt -oq posix && . /etc/bash_completion
+
 # FZF
 [[ -f ~/.fzf.bash ]] && source ~/.fzf.bash
 [[ -f ~/.fzf.colors ]] && source ~/.fzf.colors
 
-# if [[ -n "$PS1" ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_CONNECTION" ]]; then
-if [[ -n "$PS1" ]] && [[ -z "$TMUX" ]]; then
-  tmux attach-session -t main || tmux new-session -s main
-fi
-          
 
 # vim: ft=bash
