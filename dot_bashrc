@@ -17,7 +17,7 @@ PATH=$PATH:$HOME/scripts
 PATH=$PATH:$HOME/.npm/bin
 PATH=$PATH:$HOME/.zsh/bin
 PATH=$PATH:$HOME/.cargo/bin
-#PATH=$PATH:/usr/share/npm/bin
+PATH=$PATH:$HOME/.local/share/pnpm
 PATH=$PATH:$SYSTEM_PATH
 export PATH
 
@@ -74,6 +74,8 @@ alias tt='tmux attach -t'
 alias tx='tmuxinator'
 alias tls='tmux list-sessions'
 alias mkp='makepkg --noconfirm -f'
+alias pn='pnpm'
+alias px='pnpm exec nx'
 
 alias ..='cd ../'
 alias ...='cd ../../'
