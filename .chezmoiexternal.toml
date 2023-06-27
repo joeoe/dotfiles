@@ -3,3 +3,8 @@
     url = "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
     refreshPeriod = "168h"
 
+[".zgen"]
+    type = "git-repo"
+    url = "https://github.com/tarjoilija/zgen.git"
+    exact = true
+    refreshPeriod = "48h"
