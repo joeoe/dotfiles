@@ -1,0 +1,47 @@
+source "${HOME}/.zgenom/zgenom.zsh"
+
+# enable color support of ls and also add handy aliases
+  if [ -x /usr/bin/dircolors ]; then
+      test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+      alias ls='ls --color=auto'
+      alias dir='dir --color=auto'
+      alias vdir='vdir --color=auto'
+      alias grep='grep --color=auto'
+      alias fgrep='fgrep --color=auto'
+      alias egrep='egrep --color=auto'
+  fi
+
+SYSTEM_PATH=$PATH
+unset PATH
+PATH=$HOME/.local/bin
+PATH=$PATH:$HOME/bin
+PATH=$PATH:$HOME/scripts
+PATH=$PATH:$HOME/.npm/bin
+PATH=$PATH:$HOME/.zsh/bin
+PATH=$PATH:$HOME/.cargo/bin
+PATH=$PATH:$HOME/.local/share/pnpm
+PATH=$PATH:$SYSTEM_PATH
+export PATH
+
+export PAGER=less
+export EDITOR=vim
+
+# if the init scipt doesn't exist
+if ! zgenom saved; then
+    echo "Creating a zgen save"
+
+    zgenom prezto prompt theme 'sorin'
+
+    # prezto and modules
+    zgenom prezto
+    zgenom prezto git
+    zgenom prezto command-not-found
+    zgenom prezto syntax-highlighting
+    zgenom prezto prompt
+    zgenom prezto utility
+
+    # save all to init script
+    zgenom save
+fi
+
+# vim: ft=zsh
