@@ -1,0 +1,12 @@
+declare -a pkgs=("vim" "tmux" "base-devel" "ripgrep")
+{{ if eq .osid "linux-arch" }}
+# arch installs
+echo "$@"
+# sudo pacman -Syyu
+# sudo pacman -S "${pkgs[@]}"
+{{ else if eq .osid "linux-ubuntu" }}
+# Ubuntu-specific code
+{{ end }}
+
+
+# vim: ft=sh:
