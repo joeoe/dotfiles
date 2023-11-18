@@ -33,8 +33,6 @@ else
     export EDITOR=$(which vi);
 fi
 
-#export BROWSER=firefox
-
 # less is more
 export PAGER=less
 
@@ -53,7 +51,7 @@ source ~/.bash_powerline
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    # test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
@@ -62,8 +60,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-alias e='exit'
-alias q='exit'
+alias e="$EDITOR"
 alias v='vim'
 alias n='nvim'
 alias g='git'
@@ -83,8 +80,11 @@ alias ....='cd ../../../'
 alias .....='cd ../../../../'
 alias ......='cd ../../../../../'
 
-# better defaults? 
-alias ls='ls --color --group-directories-first'
+if [[ -x "$(command -v lsd)" ]]; then 
+  alias ls="lsd"
+else 
+  alias ls='ls --color --group-directories-first'
+fi
 alias l='ls -lhF'
 alias ll='ls -AlhF'
 alias la='ls -ahF'
@@ -92,11 +92,9 @@ alias df='df -h'
 alias tl='tail -f'
 
 # frequent/rc files
-alias tmc="nvim ~/.tmux.conf"
-alias vrc="vim ~/.vim/vimrc -c 'cd %:p:h'"
-alias nrc="nvim ~/.config/nvim/init.vim -c 'cd %:p:h'"
-alias nsc="nvim -c SnippetConfig"
-alias nt="nvim -c NotesWithPad"
+alias trc="$EDITOR ~/.tmux.conf"
+alias vrc="$EDITOR ~/.vim/vimrc -c 'cd %:p:h'"
+alias nrc="$EDITOR ~/.config/nvim/init.lua -c 'cd %:p:h'"
 
 alias brc="nvim ~/.bashrc"
 alias bup="source ~/.bashrc"
@@ -105,14 +103,9 @@ alias zrc="nvim ~/.zshrc"
 alias za="nvim ~/.zsh/aliases"
 alias zup="source ~/.zshrc"
 
-
 function take() {
-    mkdir $1
+    mkdir -p $1
     cd $1
-}
-
-function zet() {
-    nvim "+Zet $*"
 }
 
 # WSL-OPEN
@@ -130,6 +123,16 @@ fi
 # FZF
 [[ -f ~/.fzf.bash ]] && source ~/.fzf.bash
 [[ -f ~/.fzf.colors ]] && source ~/.fzf.colors
+[[ -f /usr/share/fzf/completion.bash ]] && source /usr/share/fzf/completion.bash
+[[ -f /usr/share/fzf/key-bindings.bash ]] && source /usr/share/fzf/key-bindings.bash
 
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#ccd0da,bg:#eff1f5,spinner:#dc8a78,hl:#d20f39 \
+--color=fg:#4c4f69,header:#d20f39,info:#8839ef,pointer:#dc8a78 \
+--color=marker:#dc8a78,fg+:#4c4f69,prompt:#8839ef,hl+:#d20f39"
+
+# fnm
+export PATH="/home/joei/.local/share/fnm:$PATH"
+eval "`fnm env`"
 
 # vim: ft=bash
