@@ -1,0 +1,38 @@
+alias _=sudo
+alias e="$EDITOR"
+alias c='clear'
+alias t='tmux'
+alias ta='tmux attach'
+alias tt='tmux attach -t'
+alias tl='tmux list-sessions'
+alias mkp='makepkg --noconfirm -f'
+alias pn='pnpm'
+alias px='pnpm exec nx'
+
+alias ..='cd ../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+alias ......='cd ../../../../../'
+
+if [[ -x "$(command -v lsd)" ]]; then 
+  alias ls="lsd"
+else 
+  alias ls='ls --color --group-directories-first'
+fi
+alias l='ls -lhF'
+alias ll='ls -AlhF'
+alias la='ls -ahF'
+alias df='df -h'
+alias tl='tail -f'
+
+# frequent/rc files
+alias nrc="$EDITOR ~/.config/nvim/init.lua -c 'cd %:p:h'"
+alias trc="chezmoi edit --apply ~/.tmux.conf"
+alias vrc="chezmoi edit --apply ~/.vim/vimrc"
+alias zrc="chezmoi edit --apply ~/.zshrc"
+alias brc="chezmoi edit --apply ~/.bashrc"
+alias bup="source ~/.bashrc"
+alias zup="source ~/.zshrc"
+
+# vim: ft=zsh

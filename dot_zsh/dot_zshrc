@@ -1,0 +1,34 @@
+setopt extended_glob
+
+source "${HOME}/.zgenom/zgenom.zsh"
+zgenom autoupdate
+
+if ! zgenom saved; then
+    zgenom prezto prompt theme 'sorin'
+    zgenom prezto
+    zgenom prezto git
+    zgenom prezto command-not-found
+    zgenom prezto syntax-highlighting
+    zgenom prezto prompt
+    zgenom prezto utility
+
+    zgenom save
+fi
+
+# Autoload functions you might want to use with antidote.
+ZFUNCDIR=${ZFUNCDIR:-$ZDOTDIR/functions}
+fpath=($ZFUNCDIR $fpath)
+autoload -Uz $fpath[1]/*(.:t)
+
+# fnm
+eval "`fnm env`"
+
+# FZF
+[[ -a ~/.fzf.zsh ]] && source ~/.fzf.zsh
+[[ -a ~/.fzf.colors ]] && source ~/.fzf.colors
+[[ -a /usr/share/fzf/completion.zsh ]] && source /usr/share/fzf/completion.zsh
+if [[ -a /usr/share/fzf/key-bindings.zsh ]]; then
+  source /usr/share/fzf/key-bindings.zsh
+fi
+
+# vim: ft=zsh
