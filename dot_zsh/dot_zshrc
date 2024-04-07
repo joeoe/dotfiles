@@ -15,13 +15,31 @@ if ! zgenom saved; then
     zgenom save
 fi
 
-# Autoload functions you might want to use with antidote.
+source $ZDOTDIR/alias
+
+#
+# ZSH_RC_D="$ZDOTDIR/zshrc.d"
+# if [[ -d "$ZSH_RC_D" ]]; then
+#   # Suffix (rn) is a glob qualifier. (r) - readable; (n) - numeric sort order.
+#   # http://zsh.sourceforge.net/Doc/Release/Expansion.html#Glob-Qualifiers
+#   for script in "${ZSH_RC_D}"/**/*.zsh(rn); do
+#     [[ -r "$script" ]] && source "$script"
+#   done
+#   unset script
+# fi
+# unset ZSH_RC_D
+# Don't let exit code of configuration scripts slip into interactive mode.
+# true
+
+# Autoload functions
 ZFUNCDIR=${ZFUNCDIR:-$ZDOTDIR/functions}
 fpath=($ZFUNCDIR $fpath)
-autoload -Uz $fpath[1]/*(.:t)
+autoload -Uz $ZFUNCDIR/**/*(r)
 
 # fnm
 eval "`fnm env`"
+
+eval "$(zoxide init zsh)"
 
 # FZF
 [[ -a ~/.fzf.zsh ]] && source ~/.fzf.zsh

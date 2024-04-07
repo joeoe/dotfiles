@@ -1,5 +1,6 @@
 alias _=sudo
 alias e="$EDITOR"
+alias es="$EDITOR -S Session.vim"
 alias c='clear'
 alias t='tmux'
 alias ta='tmux attach'
@@ -8,6 +9,21 @@ alias tl='tmux list-sessions'
 alias mkp='makepkg --noconfirm -f'
 alias pn='pnpm'
 alias px='pnpm exec nx'
+alias dc="docker-compose"
+
+alias sc='sudo systemctl'
+alias scs='sc status'
+alias sce='sc enable'
+alias scen='sc enable --now'
+alias scd='sc disable'
+alias scdn='sc disable --now'
+
+alias scu='systemctl --user'
+alias scus='scu status'
+alias scue='scu enable'
+alias scuen='scu enable --now'
+alias scud='scu disable'
+alias scudn='scu disable --now'
 
 alias ..='cd ../'
 alias ...='cd ../../'
@@ -15,24 +31,40 @@ alias ....='cd ../../../'
 alias .....='cd ../../../../'
 alias ......='cd ../../../../../'
 
-if [[ -x "$(command -v lsd)" ]]; then 
-  alias ls="lsd"
-else 
-  alias ls='ls --color --group-directories-first'
+if [[ -x "$(command -v bat)" ]]; then 
+  alias cat="bat"
 fi
-alias l='ls -lhF'
-alias ll='ls -AlhF'
-alias la='ls -ahF'
-alias df='df -h'
-alias tl='tail -f'
+
+if [[ -x "$(command -v exa)" ]]; then 
+  alias ls="exa --smart-group"
+  alias l='ls -lF'
+  alias ll='ls -alF'
+  alias la='ls -aF'
+else
+  if [[ -x "$(command -v lsd)" ]]; then 
+    alias ls="lsd"
+  else 
+    alias ls='ls --color --group-directories-first'
+  fi
+  alias l='ls -lhF'
+  alias ll='ls -AlhF'
+  alias la='ls -ahF'
+fi
+
+  alias df='df -h'
+  alias tl='tail -f'
+# dotfiles
+alias ched="chezmoi edit --apply"
+alias chcd="chezmoi cd"
 
 # frequent/rc files
 alias nrc="$EDITOR ~/.config/nvim/init.lua -c 'cd %:p:h'"
-alias trc="chezmoi edit --apply ~/.tmux.conf"
-alias vrc="chezmoi edit --apply ~/.vim/vimrc"
-alias zrc="chezmoi edit --apply ~/.zshrc"
-alias brc="chezmoi edit --apply ~/.bashrc"
+alias trc="ched ~/.tmux.conf"
+alias vrc="ched ~/.vim/vimrc"
+alias zrc="ched ~/.zsh/.zshrc"
+alias zac="ched ~/.zsh/alias"
+alias brc="ched ~/.bashrc"
 alias bup="source ~/.bashrc"
-alias zup="source ~/.zshrc"
+alias zup="source ~/.zsh/.zshrc"
 
 # vim: ft=zsh
