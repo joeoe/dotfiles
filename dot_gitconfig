@@ -4,7 +4,7 @@
     username = joeoe
 
 [core]
-    editor = vim
+    editor = nvim
 	excludesfile = ~/.config/git/ignore
 
 [init]
@@ -36,7 +36,8 @@
 
     b  = branch
     ba = branch -a
-    bd = branch -d
+    bd = branch -D
+    bl = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
 
     c  = commit
     ca = commit --amend
@@ -46,7 +47,8 @@
     cl = clone
 
     co = checkout
-    com = checkout master
+    com = checkout main
+    cod = checkout dev
     cb = checkout -b
 
     cp = cherry-pick
@@ -67,6 +69,7 @@
 
     ps = push
     psu = push --set-upstream
+    pso = push --set-upstream origin HEAD
 
     pl = pull
     pb = pull --rebase
@@ -78,11 +81,12 @@
     rbs = rebase --skip
 
     r  = reset
-    r1 = reset HEAD^
-    r2 = reset HEAD^^
+    r1 = reset HEAD~1
+    r2 = reset HEAD~2
     rh = reset --hard
-    rh1 = reset HEAD^ --hard
-    rh2 = reset HEAD^^ --hard
+    rh1 = reset HEAD~1 --hard
+    rh2 = reset HEAD~2 --hard
+    undo = reset HEAD~1 --mixed
 
     rmf = rm -f
     rmrf = rm -rf
@@ -96,6 +100,7 @@
     sl = stash list
     sp = stash pop
     sv = stash save
+    su = stash -u
 
     ls = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate
     l  = ls
