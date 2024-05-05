@@ -1,7 +1,10 @@
-declare -a pkgs=("vim" "tmux" "base-devel" "ripgrep")
+#!/usr/bin/env bash
+
+declare -a pkgs=(vim tmux base-devel ripgrep)
+
 {{ if eq .osid "linux-arch" }}
-# arch installs
-echo "$@"
+# Arch Linux
+echo "${pkgs[@]}"
 # sudo pacman -Syyu
 # sudo pacman -S "${pkgs[@]}"
 {{ else if eq .osid "linux-ubuntu" }}

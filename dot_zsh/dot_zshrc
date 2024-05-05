@@ -1,19 +1,45 @@
+
 setopt extended_glob
 
 source "${HOME}/.zgenom/zgenom.zsh"
 zgenom autoupdate
 
+ZFUNCDIR=${ZFUNCDIR:-$ZDOTDIR/functions}
+ZCOMPDIR=${ZFUNCDIR:-$ZDOTDIR/completion}
+fpath=($ZFUNCDIR $ZCOMPDIR $fpath)
+
 if ! zgenom saved; then
-    zgenom prezto prompt theme 'sorin'
+    # zgenom prezto prompt theme 'sorin'
     zgenom prezto
     zgenom prezto git
-    zgenom prezto command-not-found
-    zgenom prezto syntax-highlighting
-    zgenom prezto prompt
-    zgenom prezto utility
+    zgenom prezto history
+    # zgenom prezto command-not-found
+    # zgenom prezto syntax-highlighting
+    # zgenom prezto prompt
+    # zgenom prezto utility
+
+    zgenom ohmyzsh
+    zgenom ohmyzsh git-flow-completion
+
+
+    zgenom load romkatv/powerlevel10k powerlevel10k
+    zgenom load zsh-users/zsh-syntax-highlighting
+    zgenom load zsh-users/zsh-completions
+    zgenom load atuinsh/atuin
+
+    zgenom load belak/zsh-utils completion
 
     zgenom save
 fi
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zsh/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# eval "$(sheldon source)"
 
 source $ZDOTDIR/alias
 
@@ -32,13 +58,9 @@ source $ZDOTDIR/alias
 # true
 
 # Autoload functions
-ZFUNCDIR=${ZFUNCDIR:-$ZDOTDIR/functions}
-fpath=($ZFUNCDIR $fpath)
 autoload -Uz $ZFUNCDIR/**/*(r)
 
-# fnm
 eval "`fnm env`"
-
 eval "$(zoxide init zsh)"
 
 # FZF
@@ -49,4 +71,16 @@ if [[ -a /usr/share/fzf/key-bindings.zsh ]]; then
   source /usr/share/fzf/key-bindings.zsh
 fi
 
-# vim: ft=zsh
+# eval "$(atuin init zsh)"
+
+
+# pnpm
+export PNPM_HOME="/home/joei/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
+# To customize prompt, run `p10k configure` or edit ~/.zsh/.p10k.zsh.
+[[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
+

@@ -1,0 +1,6 @@
+require 'config.layouts'
+require 'config.bar'
+require 'config.rules'
+require 'config.scrot'
+require 'config.keybinds'
+require 'config.menu'
