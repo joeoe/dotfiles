@@ -10,6 +10,9 @@ alias mkp='makepkg --noconfirm -f'
 alias pn='pnpm'
 alias px='pnpm exec nx'
 alias dc="docker-compose"
+alias G="lazygit"
+
+unalias rm
 
 alias sc='sudo systemctl'
 alias scs='sc status'
