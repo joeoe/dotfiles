@@ -2,7 +2,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
-export XDG_RUNTIME_DIR=$HOME/.xdg
+# export XDG_RUNTIME_DIR=$HOME/.xdg
 export XDG_PROJECTS_DIR=$HOME/Projects
 
 
@@ -22,6 +22,8 @@ PATH=$PATH:$SYSTEM_PATH
 export PATH
 
 export PAGER=less
+
+# XDG_DATA_DIRS+=(/var/lib/flatpak/exports/share $XDG_DATA_HOME/flatpak/exports/share)
 
 # Test through vim iterations in order of preference
 if [[ -x "$(command -v nvim)" ]]; then
