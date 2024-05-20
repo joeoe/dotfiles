@@ -65,7 +65,7 @@ eval "$(zoxide init zsh)"
 
 # FZF
 [[ -a ~/.fzf.zsh ]] && source ~/.fzf.zsh
-[[ -a ~/.fzf.colors ]] && source ~/.fzf.colors
+[[ -a ~/themes/fzf/current ]] && source ~/themes/fzf/current
 [[ -a /usr/share/fzf/completion.zsh ]] && source /usr/share/fzf/completion.zsh
 if [[ -a /usr/share/fzf/key-bindings.zsh ]]; then
   source /usr/share/fzf/key-bindings.zsh
@@ -80,6 +80,28 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+
+# if command -v theme.sh > /dev/null; then
+# 	[ -e ~/.theme_history ] && theme.sh "$(theme.sh -l|tail -n1)"
+#
+# 	# Optional
+#
+# 	# Bind C-o to the last theme.
+# 	last_theme() {
+# 		theme.sh "$(theme.sh -l|tail -n2|head -n1)"
+# 	}
+#
+# 	zle -N last_theme
+# 	bindkey '^O' last_theme
+#
+# 	alias th='theme.sh -i'
+#
+# 	# Interactively load a light theme
+# 	alias thl='theme.sh --light -i'
+#
+# 	# Interactively load a dark theme
+# 	alias thd='theme.sh --dark -i'
+# fi
 
 # To customize prompt, run `p10k configure` or edit ~/.zsh/.p10k.zsh.
 [[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
