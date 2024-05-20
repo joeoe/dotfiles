@@ -16,6 +16,7 @@ PATH=$PATH:$HOME/scripts
 PATH=$PATH:$HOME/.npm/bin
 PATH=$PATH:$HOME/.zsh/bin
 PATH=$PATH:$HOME/.cargo/bin
+PATH=$PATH:$HOME/go/bin
 PATH=$PATH:$HOME/.local/share/pnpm
 PATH=$PATH:$HOME/.local/share/fnm
 PATH=$PATH:$SYSTEM_PATH
