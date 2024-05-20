@@ -1,0 +1,27 @@
+import = ["~/.config/alacritty/catppuccin/catppuccin-mocha.toml"]
+
+[font]
+size = 14
+
+[font.normal]
+# family = "Hack Nerd Font"
+# family = "Input Mono"
+# family = "Berkeley Mono"
+family = "MonoLisa"
+
+[selection]
+save_to_clipboard = true
+
+[shell]
+program = "/usr/bin/zsh"
+
+[keyboard]
+bindings = [
+  { key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
+  { key = "T", mods = "Super|Shift", action = "CreateNewWindow" },
+  { key = "=", mods = "Control|Shift", action = "IncreaseFontSize" },
+]
+
+[window]
+padding = { x = 8, y = 8 }
+dynamic_padding = true
