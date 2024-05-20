@@ -1,0 +1,5 @@
+lat: 49.8
+lng: 9.9
+dbusserver: true
+usegeoclue: false
+portal: true
