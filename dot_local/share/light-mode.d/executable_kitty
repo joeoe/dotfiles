@@ -1,3 +1,3 @@
 #!/bin/sh
 
-kitty +kitten themes --reload-in=all Catppuccin-Latte
+kitty +kitten themes --reload-in=all --config-file-name="theme.conf" Catppuccin-Latte
