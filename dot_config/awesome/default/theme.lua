@@ -11,42 +11,27 @@ local dpi = xresources.apply_dpi
 local gfs = require 'gears.filesystem'
 local themes_path = gfs.get_configuration_dir()
 
-local c_text = '#cdd6f4'
-local c_subtext_1 = '#bac2de'
-local c_subtext_0 = '#a6adc8'
-local c_overlay_2 = '#9399b2'
-local c_overlay_1 = '#7f849c'
-local c_overlay_0 = '#6c7086'
-local c_surface_2 = '#585b70'
-local c_surface_1 = '#45475a'
-local c_surface_0 = '#313244'
-local c_base = '#1e1e2e'
-local c_mantle = '#181825'
-local c_crust = '#11111b'
-local c_red = '#f38ba8'
-local c_lavender = '#b4befe'
-local c_yellow = '#f9e2af'
-
+local colors = require 'default.colors'
 local theme = {}
 
 theme.font = 'Inter Medium 10'
 
-theme.bg_normal = c_crust
-theme.bg_focus = c_surface_0
-theme.bg_urgent = c_surface_1
-theme.bg_minimize = c_crust
+theme.bg_normal = colors.crust
+theme.bg_focus = colors.surface_0
+theme.bg_urgent = colors.surface_1
+theme.bg_minimize = colors.crust
 theme.bg_systray = theme.bg_normal
 
-theme.fg_normal = c_subtext_0
-theme.fg_focus = c_text
-theme.fg_urgent = c_red
-theme.fg_minimize = c_subtext_0
+theme.fg_normal = colors.subtext_0
+theme.fg_focus = colors.text
+theme.fg_urgent = colors.red
+theme.fg_minimize = colors.subtext_0
 
 theme.useless_gap = dpi(2)
 theme.border_width = dpi(2)
-theme.border_color_normal = c_overlay_0
-theme.border_color_active = c_lavender
-theme.border_color_marked = c_yellow
+theme.border_color_normal = colors.overlay_0
+theme.border_color_active = colors.lavender
+theme.border_color_marked = colors.yellow
 
 -- There are other variable sets
 -- overriding the default one when
@@ -57,13 +42,13 @@ theme.border_color_marked = c_yellow
 -- tooltip_[font|opacity|fg_color|bg_color|border_width|border_color]
 -- prompt_[fg|bg|fg_cursor|bg_cursor|font]
 -- hotkeys_[bg|fg|border_width|border_color|shape|opacity|modifiers_fg|label_bg|label_fg|group_margin|font|description_font]
-theme.hotkeys_fg = c_text
-theme.hotkeys_modifiers_fg = c_subtext_0
+theme.hotkeys_fg = colors.text
+theme.hotkeys_modifiers_fg = colors.subtext_0
 theme.hotkeys_group_margin = dpi(16)
--- theme.hotkeys_modifiers_fg = c_subtext_0
--- theme.hotkeys_modifiers_fg = c_subtext_0
--- theme.hotkeys_modifiers_fg = c_subtext_0
--- theme.hotkeys_modifiers_fg = c_subtext_0
+-- theme.hotkeys_modifiers_fg = colors.subtext_0
+-- theme.hotkeys_modifiers_fg = colors.subtext_0
+-- theme.hotkeys_modifiers_fg = colors.subtext_0
+-- theme.hotkeys_modifiers_fg = colors.subtext_0
 -- Example:
 --theme.taglist_bg_focus = "#ff0000"
 
@@ -78,8 +63,8 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(taglist_square_
 -- notification_[width|height|margin]
 -- notification_[border_color|border_width|shape|opacity]
 beautiful.notification_font = 'Inter Medium 18'
-theme.notification_bg = c_surface_0
-theme.notification_fg = c_text
+theme.notification_bg = colors.surface_0
+theme.notification_fg = colors.text
 theme.notification_margin = dpi(16)
 
 -- Variables set for theming the menu:
