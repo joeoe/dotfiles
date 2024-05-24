@@ -27,6 +27,7 @@ theme.fg_focus = colors.text
 theme.fg_urgent = colors.red
 theme.fg_minimize = colors.subtext_0
 
+theme.gap_single_client = false
 theme.useless_gap = dpi(2)
 theme.border_width = dpi(2)
 theme.border_color_normal = colors.overlay_0
