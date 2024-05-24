@@ -70,6 +70,7 @@
     ps = push
     psu = push --set-upstream
     pso = push --set-upstream origin HEAD
+    please = push --force-with-lease
 
     pl = pull
     pb = pull --rebase
