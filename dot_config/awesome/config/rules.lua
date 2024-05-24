@@ -68,15 +68,19 @@ ruled.client.connect_signal('request::rules', function()
   }
   ruled.client.append_rule {
     rule = { class = 'obsidian' },
-    properties = { screen = 1, tag = '5' },
+    properties = { screen = 1, tag = '3' },
   }
   ruled.client.append_rule {
     rule = { class = 'Logseq' },
-    properties = { screen = 1, tag = '5' },
+    properties = { screen = 1, tag = '3' },
   }
   ruled.client.append_rule {
     rule = { class = 'anytype' },
-    properties = { screen = 1, tag = '5' },
+    properties = { screen = 1, tag = '3' },
+  }
+  ruled.client.append_rule {
+    rule = { class = 'Marvin' },
+    properties = { screen = 1, tag = '3' },
   }
   ruled.client.append_rule {
     rule = { class = 'steam' },
@@ -86,6 +90,7 @@ ruled.client.connect_signal('request::rules', function()
   --   rule = { class = 'Todoist' },
   --   properties = { screen = 1, tag = '9' },
   -- }
+
   -- Tekken
   ruled.client.append_rule {
     rule = { name = 'TEKKEN™8  ' },
