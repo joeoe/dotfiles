@@ -1,0 +1,33 @@
+#!/bin/sh
+
+setxkbmap us intl
+
+# export QT_STYLE_OVERRIDE=kvantum
+# export QT_QPA_PLATFORM=offscreen
+# export QT_QPA_PLATFORMTHEME=qt6ct
+# export XDG_CURRENT_DESKTOP=kde
+
+# export GTK_IM_MODULE=fcitx
+# export QT_IM_MODULE=fcitx
+# export XMODIFIERS=@im=fcitx
+
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+    for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+        [ -x "$f" ] && . "$f"
+    done
+    unset f
+fi
+
+# exec --no-startup-id /usr/lib/pam_kwallet_init &
+# /usr/lib/polkit-kde-authentication-agent-1 &
+# /usr/bin/easyeffects --gapplication-service &
+# /usr/bin/picom --dbus &
+# rclone mount ni: /data/ni --daemon
+
+session=${1:-awesome}
+case $session in
+  awesome) exec /usr/bin/awesome >> ~/.cache/awesome/stdout 2>> ~/.cache/awesome/stderr;;
+  qtile) exec qtile start;;
+  left|leftwm) dbus-launch leftwm;;
+  *) exec $1;;
+esac
