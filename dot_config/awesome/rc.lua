@@ -25,7 +25,7 @@ editor_cmd = terminal .. ' -e ' .. editor
 browser = 'firefox'
 browser_media = 'thorium-browser'
 browser_mini = 'qutebrowser'
-filebrowser = 'dolphin'
+filebrowser = 'thunar'
 password_manager = 'bitwarden-desktop'
 notes = 'obsidian'
 -- }}}
