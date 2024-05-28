@@ -61,6 +61,7 @@ alias ched="chezmoi edit --apply"
 alias chcd="chezmoi cd"
 
 # frequent/rc files
+alias crc="$EDITOR ~/.local/share/chezmoi -c 'cd %:p:h'"
 alias nrc="$EDITOR ~/.config/nvim/init.lua -c 'cd %:p:h'"
 alias trc="ched ~/.tmux.conf"
 alias vrc="ched ~/.vim/vimrc"
