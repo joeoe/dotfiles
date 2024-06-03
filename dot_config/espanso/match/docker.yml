@@ -1,0 +1,27 @@
+# Docker compose Package
+
+matches:
+  - trigger: ";dbl"
+    replace: "docker-compose build"
+    
+  - trigger: ";dup"
+    replace: "docker-compose up"
+
+  - trigger: ";dud"
+    replace: "docker-compose up -d"
+    
+  - trigger: ";ddn"
+    replace: "docker-compose down"
+
+  - trigger: ";dlo"
+    replace: "docker-compose logs"
+    
+  - trigger: ";dlf"
+    replace: "docker-compose logs -f"
+
+  - trigger: ";dex"
+    replace: "docker-compose exec"
+    
+  - trigger: ";dre"
+    replace: "docker-compose restart"
+

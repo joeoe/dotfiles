@@ -1,0 +1,12 @@
+matches:
+  # - trigger: ":a"
+  #   replace: "<a href='{{clipb}}' />$|$</a>"
+  #   vars:
+  #     - name: "clipb"
+  #       type: "clipboard"
+  - label: md link
+    trigger: ":l"
+    replace: "[$|$]({{link}})"
+    vars:
+      - name: "link"
+        type: "clipboard"
