@@ -1,4 +1,5 @@
 local awful = require 'awful'
+local bling = require 'bling'
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 tag.connect_signal('request::default_layouts', function()
@@ -13,8 +14,11 @@ tag.connect_signal('request::default_layouts', function()
     -- awful.layout.suit.spiral,
     -- awful.layout.suit.spiral.dwindle,
     awful.layout.suit.max,
-    awful.layout.suit.max.fullscreen,
+    -- awful.layout.suit.max.fullscreen,
     -- awful.layout.suit.magnifier,
-    awful.layout.suit.corner.nw,
+    -- awful.layout.suit.corner.nw,
+    bling.layout.centered,
+    -- bling.layout.vertical,
+    -- bling.layout.horizontal,
   }
 end)

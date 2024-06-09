@@ -10,6 +10,11 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 mytextclock = wibox.widget.textclock()
 
 beautiful.systray_icon_spacing = 12
+
+local theme = beautiful.get()
+local taglist_bg_hover = theme.taglist_bg_hover
+local taglist_fg_hover = theme.taglist_fg_hover
+
 screen.connect_signal('request::desktop_decoration', function(s)
   -- Each screen has its own tag table.
   awful.tag({ '1', '2', '3', '4', '5', '6', '7', '8', '9' }, s, awful.layout.layouts[1])
@@ -63,6 +68,49 @@ screen.connect_signal('request::desktop_decoration', function(s)
         awful.tag.viewnext(t.screen)
       end),
     },
+    widget_template = {
+      {
+        {
+          {
+            {
+              {
+                id = 'text_role',
+                widget = wibox.widget.textbox,
+              },
+              margins = 4,
+              widget = wibox.container.margin,
+            },
+            -- bg = '#dddddd',
+            -- shape = gears.shape.circle,
+            widget = wibox.container.background,
+          },
+          layout = wibox.layout.fixed.horizontal,
+        },
+        left = 8,
+        right = 8,
+        widget = wibox.container.margin,
+      },
+      id = 'background_role',
+      widget = wibox.container.background,
+      -- Add support for hover colors and an index label
+      -- create_callback = function(self, c3, index, objects) --luacheck: no unused args
+      --   self:connect_signal('mouse::enter', function()
+      --     if self.bg ~= taglist_bg_hover then
+      --       self.backup_bg = self.bg
+      --       self.backup_fg = self.fg
+      --       self.has_backup = true
+      --     end
+      --     self.bg = taglist_bg_hover
+      --     self.fg = taglist_fg_hover
+      --   end)
+      --   self:connect_signal('mouse::leave', function()
+      --     if self.has_backup then
+      --       self.bg = self.backup_bg
+      --       self.fg = self.backup_fg
+      --     end
+      --   end)
+      -- end,
+    },
   }
 
   -- Create a tasklist widget
@@ -70,8 +118,9 @@ screen.connect_signal('request::desktop_decoration', function(s)
     screen = s,
     filter = awful.widget.tasklist.filter.currenttags,
     style = {
-      border_width = 1,
-      shape = gears.shape.rounded_bar,
+      -- border_width = 2,
+      -- border_color =
+      -- shape = gears.shape.rounded_rect,
     },
     buttons = {
       awful.button({}, 1, function(c)
@@ -88,17 +137,17 @@ screen.connect_signal('request::desktop_decoration', function(s)
       end),
     },
     layout = {
-      spacing = 12,
-      spacing_widget = {
-        {
-          forced_width = 5,
-          shape = gears.shape.circle,
-          widget = wibox.widget.separator,
-        },
-        valign = 'center',
-        halign = 'center',
-        widget = wibox.container.place,
-      },
+      spacing = 6,
+      -- spacing_widget = {
+      -- {
+      --   forced_width = 8,
+      --   -- shape = gears.shape.circle,
+      --   widget = wibox.widget.separator,
+      -- },
+      --   valign = 'center',
+      --   halign = 'center',
+      --   widget = wibox.container.place,
+      -- },
       layout = wibox.layout.flex.horizontal,
     },
     -- Notice that there is *NO* wibox.wibox prefix, it is a template,
@@ -111,7 +160,10 @@ screen.connect_signal('request::desktop_decoration', function(s)
               id = 'icon_role',
               widget = wibox.widget.imagebox,
             },
-            margins = 2,
+            left = 4,
+            right = 6,
+            top = 1,
+            bottom = 1,
             widget = wibox.container.margin,
           },
           {
@@ -120,8 +172,10 @@ screen.connect_signal('request::desktop_decoration', function(s)
           },
           layout = wibox.layout.fixed.horizontal,
         },
-        left = 10,
-        right = 10,
+        left = 8,
+        right = 8,
+        top = 2,
+        bottom = 2,
         widget = wibox.container.margin,
       },
       id = 'background_role',
@@ -137,8 +191,13 @@ screen.connect_signal('request::desktop_decoration', function(s)
       layout = wibox.layout.align.horizontal,
       { -- Left widgets
         layout = wibox.layout.fixed.horizontal,
-        mylauncher,
-        s.mytaglist,
+        -- mylauncher,
+        {
+          s.mytaglist,
+          widget = wibox.container.margin,
+          left = 4,
+          right = 12,
+        },
         s.mypromptbox,
       },
       s.mytasklist, -- Middle widget

@@ -1,3 +1,3 @@
 #!/bin/sh
 
-ln -sf $HOME/themes/awesome/catppuccin-mocha.lua $HOME/.config/awesome/default/colors.lua
+ln -snf $HOME/themes/awesome/catppuccin-mocha $HOME/.config/awesome/theme/current

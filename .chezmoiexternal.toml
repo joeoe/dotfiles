@@ -13,3 +13,8 @@
 #     type = "git-repo"
 #     url = "https://github.com/tmux-plugins/tpm"
 #     refreshPeriod = "168h"
+
+[".config/awesome/bling"]
+type = "git-repo"
+url = "https://github.com/BlingCorp/bling.git"
+refreshPeriod = "168h"
