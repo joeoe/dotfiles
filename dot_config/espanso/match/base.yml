@@ -2,7 +2,7 @@
 # For a complete introduction, visit the official docs at: https://espanso.org/docs/
 matches:
   # Simple text replacement
-  - trigger: ":espanso"
+  - trigger: ";espanso"
     replace: "Hi there!"
 
   # Print the current date
