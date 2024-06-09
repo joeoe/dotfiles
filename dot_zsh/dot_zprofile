@@ -24,6 +24,7 @@ export PATH
 
 export PAGER=less
 
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 # XDG_DATA_DIRS+=(/var/lib/flatpak/exports/share $XDG_DATA_HOME/flatpak/exports/share)
 
 # Test through vim iterations in order of preference
