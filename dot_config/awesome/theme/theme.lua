@@ -5,6 +5,7 @@ local dpi = xresources.apply_dpi
 local gfs = require 'gears.filesystem'
 local themes_path = gfs.get_configuration_dir()
 local colors = require 'theme.current.colors'
+local icons = require 'theme.current.icons'
 
 local theme = {}
 
@@ -88,22 +89,22 @@ theme.menu_width = dpi(100)
 theme.wallpaper = themes_path .. 'theme/current/background.png'
 
 -- You can use your own layout icons like this:
-theme.layout_fairh = themes_path .. 'theme/current/layouts/fairhw.png'
-theme.layout_fairv = themes_path .. 'theme/current/layouts/fairvw.png'
-theme.layout_floating = themes_path .. 'theme/current/layouts/floatingw.png'
-theme.layout_magnifier = themes_path .. 'theme/current/layouts/magnifierw.png'
-theme.layout_max = themes_path .. 'theme/current/layouts/maxw.png'
-theme.layout_fullscreen = themes_path .. 'theme/current/layouts/fullscreenw.png'
-theme.layout_tilebottom = themes_path .. 'theme/current/layouts/tilebottomw.png'
-theme.layout_tileleft = themes_path .. 'theme/current/layouts/tileleftw.png'
-theme.layout_tile = themes_path .. 'theme/current/layouts/tilew.png'
-theme.layout_tiletop = themes_path .. 'theme/current/layouts/tiletopw.png'
-theme.layout_spiral = themes_path .. 'theme/current/layouts/spiralw.png'
-theme.layout_dwindle = themes_path .. 'theme/current/layouts/dwindlew.png'
-theme.layout_cornernw = themes_path .. 'theme/current/layouts/cornernww.png'
-theme.layout_cornerne = themes_path .. 'theme/current/layouts/cornernew.png'
-theme.layout_cornersw = themes_path .. 'theme/current/layouts/cornersww.png'
-theme.layout_cornerse = themes_path .. 'theme/current/layouts/cornersew.png'
+theme.layout_fairh = icons.layout_fairh
+theme.layout_fairv = icons.layout_fairv
+theme.layout_floating = icons.layout_floating
+theme.layout_magnifier = icons.layout_magnifier
+theme.layout_max = icons.layout_max
+theme.layout_fullscreen = icons.layout_fullscreen
+theme.layout_tilebottom = icons.layout_tilebottom
+theme.layout_tileleft = icons.layout_tileleft
+theme.layout_tile = icons.layout_tile
+theme.layout_tiletop = icons.layout_tiletop
+theme.layout_spiral = icons.layout_spiral
+theme.layout_dwindle = icons.layout_dwindle
+theme.layout_cornernw = icons.layout_cornernw
+theme.layout_cornerne = icons.layout_cornerne
+theme.layout_cornersw = icons.layout_cornersw
+theme.layout_cornerse = icons.layout_cornerse
 
 -- Generate Awesome icon:
 theme.awesome_icon = theme_assets.awesome_icon(theme.menu_height, theme.bg_focus, theme.fg_focus)
