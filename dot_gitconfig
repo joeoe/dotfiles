@@ -1,11 +1,11 @@
 [user]
     name = Johannes Juks
-    email = johannesjuks@gmail.com
+    email = johannesjuks@proton.me
     username = joeoe
 
 [core]
     editor = nvim
-	excludesfile = ~/.config/git/ignore
+    excludesfile = ~/.config/git/ignore
 
 [init]
     defaultBranch = main
@@ -24,6 +24,9 @@
 
 [diff]
     tool = vimdiff
+
+; [url "ssh://git@github.com/"]
+; 	insteadOf = https://github.com/
 
 [alias]
     a  = add
