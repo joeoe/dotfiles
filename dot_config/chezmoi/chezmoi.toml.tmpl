@@ -4,13 +4,13 @@
 {{- end -}}
 
 [data]
-    osid = {{ $osid | quote }}
+osid = {{ $osid | quote }}
 
 [diff]
-    command = "nvim"
-    args = ["-d", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
-    exclude = ["externals"]
+command = "delta"
+# args = ["-d", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
+exclude = ["externals"]
 
 [merge]
-    command = "nvim"
-    args = ["-d", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Source {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
+command = "nvim"
+args = ["-d", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Source {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
