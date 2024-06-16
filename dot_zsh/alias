@@ -56,8 +56,9 @@ fi
 
   alias df='df -h'
   alias tl='tail -f'
+
 # dotfiles
-alias ched="chezmoi edit --apply"
+alias ched="chezmoi edit --apply --watch"
 alias chcd="chezmoi cd"
 
 # frequent/rc files
