@@ -292,7 +292,7 @@ client.connect_signal('request::default_keybindings', function()
       c:raise()
     end, { description = 'toggle fullscreen', group = 'client' }),
 
-    awful.key({ modkey, 'Shift' }, 'c', function(c)
+    awful.key({ modkey }, 'q', function(c)
       c:kill()
     end, { description = 'close', group = 'client' }),
 
