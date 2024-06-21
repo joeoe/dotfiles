@@ -4,7 +4,7 @@ matches:
   #   vars:
   #     - name: "clipb"
   #       type: "clipboard"
-  - label: md link
+  - label: "markdown [l]ink from [c]lipboard"
     trigger: ";lc"
     replace: "[$|$]({{link}})"
     vars:

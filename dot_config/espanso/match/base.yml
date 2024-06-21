@@ -32,4 +32,14 @@ matches:
         params:
           cmd: "echo 'Hello from your shell'"
 
+  - label: "[c]ode [b]lock [c]lip[b]oard"
+    trigger: ";cb"
+    replace: |
+      ```
+      {{cb}}
+      ```
+    vars:
+      - name: "cb"
+        type: "clipboard"
+
   # And much more! For more information, visit the docs: https://espanso.org/docs/
