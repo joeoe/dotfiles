@@ -3,7 +3,8 @@ local wibox = require 'wibox'
 local awful = require 'awful'
 
 screen.connect_signal('request::wallpaper', function(s)
-  local p = '/data/smol/images/walls/_rotation/'
+  local p = {{ default "~/Pictures/walls" .dir.walls | squote }}
+
   if s.geometry.width > 2600 then
     p = p .. 'ultrawide'
   else
