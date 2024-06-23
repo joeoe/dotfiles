@@ -6,6 +6,13 @@
 [data]
 osid = {{ $osid | quote }}
 
+[data.dir]
+{{- if eq .chezmoi.hostname "something-weird" }}
+walls = '~/Pictures/walls/_rotation/'
+{{- else }}
+walls = '/data/smol/images/walls/_rotation/'
+{{- end }}
+
 [diff]
 command = "delta"
 # args = ["-d", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
