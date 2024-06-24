@@ -4,8 +4,9 @@ source "${HOME}/.zgenom/zgenom.zsh"
 zgenom autoupdate
 
 ZFUNCDIR=${ZFUNCDIR:-$ZDOTDIR/functions}
-ZCOMPDIR=${ZFUNCDIR:-$ZDOTDIR/completion}
+ZCOMPDIR=${ZCOMPDIR:-$ZDOTDIR/completion}
 fpath=($ZFUNCDIR $ZCOMPDIR $fpath)
+
 
 if ! zgenom saved; then
     # zgenom prezto prompt theme 'sorin'
@@ -31,6 +32,9 @@ if ! zgenom saved; then
 
     zgenom save
 fi
+
+autoload -Uz compinit
+compinit
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
