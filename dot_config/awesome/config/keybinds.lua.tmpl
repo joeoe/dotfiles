@@ -50,8 +50,11 @@ awful.keyboard.append_global_keybindings {
   end, { description = 'open filebrowser', group = 'launcher' }),
 
   awful.key({ modkey }, 'r', function()
+    {{ if eq .chezmoi.hostname "ichi" }}
     awful.spawn.with_shell '~/.config/rofi/launchers/type-1/launcher.sh'
-    -- awful.spawn.with_shell 'rofi -show drun'
+    {{ else }}
+     awful.spawn.with_shell 'rofi -show drun'
+     {{ end }}
     -- awful.screen.focused().mypromptbox:run()
   end, { description = 'run prompt', group = 'launcher' }),
   -- awful.key({ modkey }, "p", function()
