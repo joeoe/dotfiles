@@ -18,3 +18,10 @@
 type = "git-repo"
 url = "https://github.com/BlingCorp/bling.git"
 refreshPeriod = "168h"
+
+[".config/kitty/meow"]
+type = "git-repo"
+url = "https://github.com/taylorzr/kitty-meow.git"
+refreshPeriod = "168h"
+
+
