@@ -55,46 +55,43 @@ ruled.client.connect_signal('request::rules', function()
     properties = { floating = true },
   }
 
+  -- Default screens & tags
+  ruled.client.append_rules {
+    {
+      rule = { class = 'firefox' },
+      properties = { screen = 1, tag = '1' },
+    },
+    {
+      rule_any = { class = { 'obsidian', 'Logseq', 'anytype' } },
+      properties = { screen = 1, tag = '5' },
+    },
+    {
+      rule = { class = 'Marvin' },
+      properties = { screen = 1, tag = '4' },
+    },
+    {
+      rule = { class = 'steam' },
+      properties = { screen = 1, tag = '8' },
+    },
+    {
+      rule = { name = 'TEKKEN™8  ' },
+      properties = { screen = 1, tag = '8', fullscreen = true },
+    },
+    -- Second screen
+    {
+      rule = { class = 'Slack' },
+      properties = { screen = 2, tag = '7' },
+    },
+    {
+      rule = { class = 'Microsoft-edge' },
+      properties = { screen = 2, tag = '2' },
+    },
+  }
+
+  -- Marvin quick add looks horrible?
   ruled.client.append_rule {
     rule = { name = { 'Amazing Marvin - Quick Add' } },
     properties = { border_width = 0 },
-  }
-
-  -- Default screens & tags
-  ruled.client.append_rule {
-    rule = { class = 'firefox' },
-    properties = { screen = 1, tag = '1' },
-  }
-  ruled.client.append_rule {
-    rule = { class = 'obsidian' },
-    properties = { screen = 1, tag = '3' },
-  }
-  ruled.client.append_rule {
-    rule = { class = 'Logseq' },
-    properties = { screen = 1, tag = '3' },
-  }
-  ruled.client.append_rule {
-    rule = { class = 'anytype' },
-    properties = { screen = 1, tag = '3' },
-  }
-  ruled.client.append_rule {
-    rule = { class = 'Marvin' },
-    properties = { screen = 1, tag = '3' },
-  }
-  ruled.client.append_rule {
-    rule = { class = 'steam' },
-    properties = { screen = 1, tag = '8' },
-  }
-  -- Tekken
-  ruled.client.append_rule {
-    rule = { name = 'TEKKEN™8  ' },
-    -- rule = { class = "steam_app_1778820" },
-    properties = { screen = 1, tag = '8', fullscreen = true },
-  }
-  -- Second screen
-  ruled.client.append_rule {
-    rule = { class = 'Slack' },
-    properties = { screen = 2, tag = '7' },
   }
 end)
 
