@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
+  "diagnostics": {
+    "enable": true,
+    "disable": [
+      "lowercase-global"
+    ],
+    "globals": [
+      "awesome",
+      "awful",
+      "client",
+      "screen",
+      "tag"
+    ]
+  },
+  "workspace": {
+    "library": [
+      "/usr/share/awesome/lib/"
+    ],
+    "maxPreload": 2000,
+    "preloadFileSize": 1000
+  },
+  "telemetry.enable": false
+}
