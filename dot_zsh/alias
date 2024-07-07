@@ -11,6 +11,8 @@ alias pn='pnpm'
 alias px='pnpm exec nx'
 alias dc="docker-compose"
 alias G="lazygit"
+# ripgrep processes
+alias rp="ps aux | rg "
 
 unalias rm
 
