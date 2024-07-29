@@ -68,6 +68,7 @@ autoload -Uz $ZFUNCDIR/**/*(r)
 
 eval "`fnm env`"
 eval "$(zoxide init zsh)"
+eval "$(/usr/bin/mise activate zsh)"
 
 # FZF
 [[ -a ~/.fzf.zsh ]] && source ~/.fzf.zsh
