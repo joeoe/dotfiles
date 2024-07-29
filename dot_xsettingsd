@@ -1,5 +1,5 @@
 Xft/Antialias   1
-Xft/DPI         110592
+Xft/DPI         110080
 Xft/Hinting     1
-Xft/HintStyle   "hintfull"
+Xft/HintStyle   "hintslight"
 Xft/RGBA        "rgb"
