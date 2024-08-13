@@ -10,3 +10,12 @@ matches:
     vars:
       - name: "link"
         type: "clipboard"
+
+  # Markdown header with date
+  - trigger: ";mdt"
+    replace: "## {{mydate}}\n"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y-%m-%d"
