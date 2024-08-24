@@ -14,10 +14,14 @@ walls = '/data/smol/images/walls/_rotation/'
 {{- end }}
 
 [diff]
+{{- if lookPath "delta" }}
 command = "delta"
 # args = ["-d", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
+{{ end }}
 exclude = ["externals"]
 
 [merge]
+{{- if lookPath "nvim" }}
 command = "nvim"
 args = ["-d", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Source {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
+{{ end }}
