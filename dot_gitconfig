@@ -53,6 +53,8 @@
     com = checkout main
     cod = checkout dev
     cb = checkout -b
+    cbf = "!f() { git checkout -b feature/$1; }; f"
+    cbh = "!f() { git checkout -b hotfix/$1; }; f"
 
     cp = cherry-pick
     cpa = cherry-pick --abort
