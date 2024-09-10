@@ -57,6 +57,15 @@ awful.keyboard.append_global_keybindings {
      {{ end }}
     -- awful.screen.focused().mypromptbox:run()
   end, { description = 'run prompt', group = 'launcher' }),
+
+  awful.key({ modkey, 'Control' }, 'r', function()
+    awful.spawn.with_shell '~/.config/rofi/bookmarks.sh'
+  end, { description = 'run rofi bookmarks script', group = 'launcher' }),
+
+  awful.key({ modkey, 'Control' }, 's', function()
+    awful.spawn.with_shell '~/git/rofi-desktop/scripts/rofi-desktop.sh -w'
+  end, { description = 'run rofi web search script', group = 'launcher' }),
+
   -- awful.key({ modkey }, "p", function()
   -- 	menubar.show()
   -- end, { description = "show the menubar", group = "launcher" }),

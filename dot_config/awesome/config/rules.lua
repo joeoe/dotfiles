@@ -62,6 +62,10 @@ ruled.client.connect_signal('request::rules', function()
       properties = { screen = 1, tag = '1' },
     },
     {
+      rule = { class = 'Code' },
+      properties = { screen = 1, tag = '3' },
+    },
+    {
       rule_any = { class = { 'obsidian', 'Logseq', 'anytype' } },
       properties = { screen = 1, tag = '5' },
     },
@@ -83,7 +87,7 @@ ruled.client.connect_signal('request::rules', function()
       properties = { screen = 2, tag = '7' },
     },
     {
-      rule = { class = 'Microsoft-edge' },
+      rule_any = { class = { 'Chromium', 'Microsoft-edge' } },
       properties = { screen = 2, tag = '2' },
     },
   }
