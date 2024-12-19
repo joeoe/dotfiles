@@ -23,6 +23,14 @@ matches:
         params:
           format: "%Y-%m-%d"
 
+  - trigger: ";datd"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y.%m.%d"
+
   # Print the output of a shell command
   - trigger: ";shell"
     replace: "{{output}}"
